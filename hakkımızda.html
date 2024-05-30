@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hakkımızda</title>
+    <link rel="stylesheet" type="text/css" href="styleshak.css">
+</head>
+<body>
+    <div class="background-image">
+        <img src="" alt="">
+    </div>
+    <header>
+        <h1><a href="farklı.html"><img src="../farklıvol2/RESİM/frc-white.png" alt="Logo" style="height: 70px;"></a></h1>
+        <nav>
+            <ul>
+                <li><a href="farklı.html">Ana Sayfa</a></li>
+                <li><a href="hakkımızda.html">Hakkımızda</a></li>
+                <li><a href="iletisim.html">İletişim</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="about-us">
+        <div class="background-image"></div>
+        <div class="about-us-content">
+            <div class="text-section">
+                <p>Azimli gençlerle...</p>
+                <p>Özveriyle çalışan takımlar ile...</p>
+                <p>İlham verici projelerle...</p>
+                <h2>ULAŞTIĞIMIZ KİŞİ SAYISI:</h2>
+            </div>
+            <div class="counter-section" id="counter">0</div>
+        </div>
+    </div>
+    <div class="grid-row reverse video-gallery">
+        <input type="radio" value="1" name="video-list" id="video-1" checked="checked" /><label for="video-1">2022 Sezon tanıtım</label>
+        <input type="radio" value="2" name="video-list" id="video-2" /><label for="video-2">2023 Sezon tanıtım</label>
+        <input type="radio" value="3" name="video-list" id="video-3" /><label for="video-3">2024 Sezon tanıtım</label>
+        <input type="radio" value="4" name="video-list" id="video-4" /><label for="video-4">2025 Sezon tanıtım</label>
+        <!-- videos -->
+        <div class="video video-1">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/LgniEjI9cCM?si=1Yxp8y6GPKjiLIRm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="video video-2">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/0zpflsYc4PA?si=uSxsAx5dv6e6ouy0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+       
+        <div class="video video-3">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/9keeDyFxzY4?si=6N6s53x540asTTL2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+       
+        <div class="video video-4">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/zM1wAo4eQzQ?si=VMJmhmJbH9YCMEop" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+       
+        <!-- videos -->
+    </div>
+
+
+
+    <div class="ocean">
+        <div class="wave"></div>
+        <div class="wave"></div>
+    </div>
+    <footer>
+        <div class="footer-left">
+            <h3>İletişim Bilgileri</h3>
+            <p>Adres: Örnek Mahallesi, İstanbul</p>
+            <p>Telefon: (123) 456-7890</p>
+            <p>Email: info@ornek.com</p>
+        </div>
+        <div class="footer-center">
+            <h3>sponsorlar</h3>
+            <img src="../farklıvol2/RESİM/png-clipart-logo-brand-organization-real-estate-ads-angle-apartment.png" alt="Sosyal Medya 1">
+            <img src="../farklıvol2/RESİM/png-clipart-t-shirt-neff-headwear-camarillo-beanie-clothing-sticky-article-hat-text-thumbnail.png" alt="Sosyal Medya 2">
+            <img src="../farklıvol2/RESİM/png-clipart-trademark-circle-logo-white-circle-white-trademark-thumbnail.png" alt="Sosyal Medya 3">
+        </div>
+        <div class="footer-right">
+            <h3>İletişim Formu</h3>
+            <form action="#">
+                <input type="text" placeholder="Adınız">
+                <input type="email" placeholder="Email">
+                <textarea placeholder="Mesajınız" rows="4"></textarea>
+                <button type="submit">Gönder</button>
+            </form>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let counter = document.getElementById('counter');
+            let count = 0;
+            let target = 2000000;
+            let increment = Math.ceil(target / 100);  // Adjust increment for smoothness
+
+            function updateCounter() {
+                count += increment;
+                counter.textContent = count.toLocaleString();
+                if (count < target) {
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    counter.textContent = target.toLocaleString();
+                }
+            }
+
+            updateCounter();
+        });
+
+    </script>
+</body>
+</html>

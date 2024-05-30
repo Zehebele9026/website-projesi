@@ -1,0 +1,219 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background: #015871;
+    position: relative;
+    overflow-x: hidden;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+header {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #015871;
+    padding: 1em 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+header h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 1em;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ccc;
+}
+
+nav ul li a:hover {
+    color: #00b8d9;
+    animation: colorChange 0.5s;
+}
+.contact-form {
+    width: 650px;
+    height: 450px;
+position: relative;
+top: 360px;
+left: 750px;
+bottom: 600px;
+transform: translate(-50%, -50%);
+background-color: rgba(0, 184, 217, 0.8); /* Mavi renk */
+padding: 20px;
+border-radius: 10px;
+animation: fadeIn 1s ease forwards;
+}
+
+.contact-form h3 {
+text-align: center;
+color: #fff;
+margin-top: 0;
+}
+
+.contact-form form {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.contact-form input,
+.contact-form textarea {
+margin: 10px 0;
+padding: 10px;
+width: 100%;
+border: none;
+border-radius: 5px;
+}
+
+.contact-form button {
+padding: 10px 20px;
+border: none;
+border-radius: 5px;
+background: #fff;
+color: #007bbd; /* Mavi renk */
+cursor: pointer;
+transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+background: #007bbd; /* Mavi renk */
+color: #fff;
+}
+
+@keyframes fadeIn {
+from {
+opacity: 0;
+}
+to {
+opacity: 1;
+}
+}
+footer {
+position: relative;
+top: 300px;
+    background: #014258;
+    color: #fff;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-left, .footer-center, .footer-right {
+    flex: 1;
+    margin: 10px;
+    text-align: center;
+}
+
+.footer-center img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+.footer-right form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-right form input, .footer-right form textarea {
+    margin: 5px 0;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 80%;
+}
+
+.footer-right form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background: #00b8d9;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.footer-right form button:hover {
+    background: #00a1c4;
+}
+.ocean {
+    height: 150px; /* Daha belirgin hale getirmek için yükseklik artırıldı */
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 0; /* Dalganın içeriğin arkasında görünmesini sağla */
+}
+
+.wave {
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg) repeat-x;
+    position: absolute;
+    width: 200%; /* Dalganın genişliğini artırarak ekranın tamamını kaplamasını sağlıyoruz */
+    height: 100%;
+    top: 50px;
+    animation: wave 7s ease-in-out infinite;
+}
+
+.wave:nth-of-type(2) {
+    top: 70px;
+    animation: swell 7s ease-in-out infinite;
+    opacity: 0.6;
+}
+
+@keyframes wave {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes swell {
+    0%, 100% {
+        transform: translate3d(0, -25px, 0);
+    }
+    50% {
+        transform: translate3d(0, 5px, 0);
+    }
+}
+#kayanYazi {
+position: absolute;
+top: 50%;
+left: 50%;
+white-space: nowrap;
+font-size: 24px;
+color: rgb(0, 0, 0);
+}
+.kutu1{
+position: absolute;
+
+}
